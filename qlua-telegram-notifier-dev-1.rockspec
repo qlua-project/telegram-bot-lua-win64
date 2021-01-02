@@ -9,7 +9,8 @@ description = {
    license = "*** please specify a license ***"
 }
 dependencies = {
-   "lua ~> 5.3"
+   "lua ~> 5.3",
+   "telegram-bot-lua ~>1.10-0"
 }
 build = {
    type = "builtin",
