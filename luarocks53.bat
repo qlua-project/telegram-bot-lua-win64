@@ -1,1 +1,1 @@
-@"%~dp0luarocks.bat" --lua-version "5.3" %*
+@"%~dp0luarocks.bat" --lua-version "5.3" --lua-dir "%~dp0externals\lua-5.3.5" %*
