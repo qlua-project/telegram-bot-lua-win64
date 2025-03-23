@@ -6,6 +6,14 @@ https://luarocks.org/modules/wrxck/telegram-bot-lua
 
   Error: This rockspec for telegram-bot-lua does not support mingw, mingw32, win32, windows platforms.
 
+== Final Commands:
+
+> luarocks54 make "OPENSSL_DIR=%CD%\externals\openssl"
+> luarocks53 make "OPENSSL_DIR=%CD%\externals\openssl"
+
+> lua54 src\bot-connect.lua
+> lua53 src\bot-connect.lua
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 luarocks-3.11.1-windows-64.zip (luarocks.exe stand-alone Windows 64-bit binary)
@@ -76,6 +84,25 @@ luarocks.exe
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+  > luarocks build -h
+
+        If no arguments are given, behaves as luarocks make.
+
+  > luarocks make -h
+
+        Builds sources in the current directory, but unlike "build", it does not fetch
+        sources, etc., assuming everything is available in the current directory. If no
+        argument is given, it looks for a rockspec in the current directory and in
+        "rockspec/" and "rockspecs/" subdirectories
+
+        This command is useful as a tool for debugging rockspecs.
+
+        If the current directory contains a luarocks.lock file, it is used as the
+        authoritative source for exact version of dependencies. The --pin flag
+        overrides and recreates this file scanning dependency based on ranges.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 https://github.com/wrxck/telegram-bot-lua/blob/main/telegram-bot-lua-2.0-0.rockspec
 
   dependencies = {
@@ -88,11 +115,5 @@ https://github.com/wrxck/telegram-bot-lua/blob/main/telegram-bot-lua-2.0-0.rocks
       "html-entities >= 1.3.1-0"
   }
 
-  > luarocks install dkjson
-  > luarocks install lpeg
-  > luarocks install luasec
-  > luarocks install luasocket
-  > luarocks install multipart-post
-  > luarocks install luautf8
-  > luarocks install html-entities
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
