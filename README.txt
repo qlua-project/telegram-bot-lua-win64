@@ -117,3 +117,26 @@ https://github.com/wrxck/telegram-bot-lua/blob/main/telegram-bot-lua-2.0-0.rocks
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+https://github.com/luarocks/luarocks/blob/main/docs/paths_and_external_dependencies.md
+
+  avoid the "works on my machine" situation
+
+ - https://github.com/luarocks/luarocks/blob/main/docs/rockspec_format.md
+ - https://github.com/luarocks/luarocks/blob/main/docs/config_file_format.md
+ - https://github.com/luarocks/luarocks/blob/main/docs/platform_agnostic_external_dependencies.md
+ - https://github.com/luarocks/luarocks/blob/main/docs/platform_overrides.md
+
+  external_dependencies = {
+      FOO = {
+         library = "foo"
+      }
+  }
+
+  once you added FOO in the external_dependencies, this means you can pass FOO_DIR
+  (since 3.4.0, the variable DEPS_DIR which doesn't depend on the name FOO, could also used)
+
+  > luarocks install my_rockspec_using_foo-1.0-1.rockspec FOO_LIBDIR=/home/joeuser/foo/lib
+  > luarocks install my_rockspec_using_foo-1.0-1.rockspec DEPS_DIR=/home/joeuser/foo/lib
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
