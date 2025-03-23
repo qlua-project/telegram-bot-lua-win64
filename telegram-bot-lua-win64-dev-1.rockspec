@@ -20,6 +20,11 @@ dependencies = {
    "luautf8 >= 0.1.1-1",
    "html-entities >= 1.3.1-0",
 }
+external_dependencies = {
+   OPENSSL = {
+      header = "openssl/ssl.h",
+   }
+}
 build = {
    type = "builtin",
    modules = {
