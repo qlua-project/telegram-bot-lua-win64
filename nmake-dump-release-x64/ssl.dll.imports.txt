@@ -1,0 +1,313 @@
+Microsoft (R) COFF/PE Dumper Version 14.43.34808.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file lua_modules\lib\lua\5.4\ssl.dll
+
+File Type: DLL
+
+  Section contains the following imports:
+
+    lua54.dll
+             1800095E0 Import Address Table
+             18000C1F0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          76 lua_setmetatable
+                           B luaL_checknumber
+                          22 luaL_pushresult
+                           1 luaL_addlstring
+                          21 luaL_prepbuffsize
+                           5 luaL_buffinit
+                          20 luaL_optnumber
+                           E luaL_checktype
+                          1E luaL_optinteger
+                           4 luaL_argerror
+                          7D lua_toboolean
+                          6D lua_rotate
+                           C luaL_checkoption
+                          28 luaL_testudata
+                          39 lua_error
+                          31 lua_callk
+                          65 lua_rawgeti
+                          5B lua_pushlightuserdata
+                          81 lua_tolstring
+                          4D lua_isstring
+                          26 luaL_setfuncs
+                           F luaL_checkudata
+                          1B luaL_newmetatable
+                           9 luaL_checkinteger
+                          1F luaL_optlstring
+                           A luaL_checklstring
+                          10 luaL_checkversion_
+                          5F lua_pushstring
+                          69 lua_rawseti
+                          70 lua_setfield
+                          77 lua_settable
+                          54 lua_newuserdatauv
+                          3C lua_getfield
+                          47 lua_gettable
+                          59 lua_pushfstring
+                          5C lua_pushlstring
+                          5A lua_pushinteger
+                          67 lua_rawlen
+                          86 lua_type
+                          4E lua_isuserdata
+                          36 lua_copy
+                          48 lua_gettop
+                          55 lua_next
+                          64 lua_rawget
+                          5E lua_pushnumber
+                          5D lua_pushnil
+                          82 lua_tonumberx
+                          4C lua_isnumber
+                          61 lua_pushvalue
+                          78 lua_settop
+                          68 lua_rawset
+                          37 lua_createtable
+                          57 lua_pushboolean
+
+    libssl-3-x64.dll
+             1800093D0 Import Address Table
+             18000BFE0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         1B5 SSL_is_server
+                          30 SSL_COMP_get_name
+                         166 SSL_get_current_compression
+                         1A5 SSL_get_verify_result
+                         1DB SSL_set_SSL_CTX
+                         15D SSL_get_certificate
+                          1E SSL_CIPHER_description
+                         1DC SSL_set_accept_state
+                         1E9 SSL_set_connect_state
+                         21B SSL_shutdown
+                         138 SSL_do_handshake
+                         1A6 SSL_get_version
+                         16C SSL_get_error
+                          45 SSL_CTX_callback_ctrl
+                         133 SSL_ctrl
+                         235 SSL_write
+                         1C4 SSL_read
+                         13F SSL_free
+                         137 SSL_dane_tlsa_add
+                         135 SSL_dane_enable
+                         224 SSL_up_ref
+                         1BD SSL_new
+                         17A SSL_get_peer_cert_chain
+                         155 SSL_get1_peer_certificate
+                         1F1 SSL_set_fd
+                         1C2 SSL_pending
+                          21 SSL_CIPHER_get_bits
+                         165 SSL_get_current_cipher
+                         234 SSL_want
+                         17B SSL_get_peer_finished
+                         171 SSL_get_finished
+                         13C SSL_export_keying_material
+                         18C SSL_get_servername
+                         142 SSL_get0_alpn_selected
+                          CF SSL_CTX_set_tmp_dh_callback
+                         16F SSL_get_ex_data_X509_STORE_CTX_idx
+                          63 SSL_CTX_get_ex_data
+                          A8 SSL_CTX_set_ex_data
+                         158 SSL_get_SSL_CTX
+                          76 SSL_CTX_load_verify_locations
+                         23A TLS_method
+                          4B SSL_CTX_ctrl
+                          4F SSL_CTX_dane_set_flags
+                          4D SSL_CTX_dane_enable
+                          46 SSL_CTX_check_private_key
+                          A2 SSL_CTX_set_default_passwd_cb_userdata
+                          A1 SSL_CTX_set_default_passwd_cb
+                          95 SSL_CTX_set_cert_verify_callback
+                          D2 SSL_CTX_set_verify_depth
+                          D1 SSL_CTX_set_verify
+                          DF SSL_CTX_use_psk_identity_hint
+                          72 SSL_CTX_get_verify_mode
+                          DD SSL_CTX_use_certificate_chain_file
+                          D6 SSL_CTX_use_PrivateKey_file
+                          97 SSL_CTX_set_ciphersuites
+                          5D SSL_CTX_get_cert_store
+                          53 SSL_CTX_free
+                          78 SSL_CTX_new
+                          96 SSL_CTX_set_cipher_list
+                         1CC SSL_select_next_proto
+                          B6 SSL_CTX_set_psk_server_callback
+                          B4 SSL_CTX_set_psk_client_callback
+                          8E SSL_CTX_set_alpn_select_cb
+                          8D SSL_CTX_set_alpn_protos
+                          B2 SSL_CTX_set_options
+
+    libcrypto-3-x64.dll
+             180009178 Import Address Table
+             18000BD88 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         619 ERR_clear_error
+                         646 ERR_peek_error
+                        1405 X509_up_ref
+                         44A DH_free
+                         DFD PEM_read_bio_DHparams
+                        1374 X509_VERIFY_PARAM_set_trust
+                        1372 X509_VERIFY_PARAM_set_purpose
+                        12D4 X509_STORE_CTX_get0_param
+                        12E7 X509_STORE_CTX_get_error_depth
+                        12E8 X509_STORE_CTX_get_ex_data
+                        1338 X509_STORE_set_flags
+                         54D EC_KEY_free
+                         1C2 BIO_new_mem_buf
+                         657 ERR_reason_error_string
+                         61F ERR_get_error
+                        1166 X509V3_EXT_d2i
+                         9ED GENERAL_NAME_free
+                         E49 PEM_write_bio_PUBKEY
+                         E52 PEM_write_bio_X509
+                         E11 PEM_read_bio_X509
+                        120E X509_EXTENSION_get_object
+                        13B3 X509_get_ext
+                        13B4 X509_get_ext_by_NID
+                        1240 X509_NAME_ENTRY_get_data
+                        1241 X509_NAME_ENTRY_get_object
+                        1252 X509_NAME_get_entry
+                        124F X509_NAME_entry_count
+                        13BF X509_get_pubkey
+                        139E X509_get0_notAfter
+                        139F X509_get0_notBefore
+                        13C5 X509_get_subject_name
+                        13BB X509_get_issuer_name
+                        13C1 X509_get_serialNumber
+                        13C3 X509_get_signature_nid
+                        1398 X509_free
+                        138F X509_cmp_time
+                        1392 X509_digest
+                        1408 X509_verify_cert_error_string
+                        12E6 X509_STORE_CTX_get_error
+                        130F X509_STORE_add_cert
+                        12F2 X509_STORE_CTX_init
+                        12CF X509_STORE_CTX_free
+                        12F4 X509_STORE_CTX_new
+                        1312 X509_STORE_free
+                        132C X509_STORE_new
+                        1407 X509_verify_cert
+                         860 EVP_PKEY_free
+                         87C EVP_PKEY_get_bits
+                         87B EVP_PKEY_get_base_id
+                         9D9 EVP_sha512
+                         9D3 EVP_sha256
+                         A79 OBJ_nid2sn
+                         598 EC_get_builtin_curves
+                         55B EC_KEY_new_by_curve_name
+                         B48 OPENSSL_sk_num
+                         B52 OPENSSL_sk_value
+                         B46 OPENSSL_sk_new_null
+                         B42 OPENSSL_sk_free
+                         B4B OPENSSL_sk_push
+                         3C5 CRYPTO_free
+                         1B4 BIO_new
+                         17E BIO_free
+                         1FF BIO_write
+                         15B BIO_ctrl
+                         1DE BIO_s_mem
+                         256 BN_free
+                         244 BN_bn2hex
+                          96 ASN1_STRING_length
+                          94 ASN1_STRING_get0_data
+                          5D ASN1_INTEGER_to_BN
+                          A1 ASN1_STRING_to_UTF8
+                          B2 ASN1_TIME_print
+                         A7B OBJ_obj2txt
+                         9D1 EVP_sha1
+
+    WS2_32.dll
+             1800090B0 Import Address Table
+             18000BCC0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                             Ordinal    18
+                          AA getnameinfo
+                             Ordinal    10
+                             Ordinal     3
+                             Ordinal   151
+                             Ordinal   111
+                             Ordinal   115
+                             Ordinal   116
+
+    KERNEL32.dll
+             180009000 Import Address Table
+             18000BC10 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         222 GetCurrentProcessId
+                         2F8 GetSystemTimeAsFileTime
+                         4DF RtlCaptureContext
+                         4E7 RtlLookupFunctionEntry
+                         4EE RtlVirtualUnwind
+                         5CE UnhandledExceptionFilter
+                         58D SetUnhandledExceptionFilter
+                         221 GetCurrentProcess
+                         5AC TerminateProcess
+                         395 IsProcessorFeaturePresent
+                         45B QueryPerformanceCounter
+                         226 GetCurrentThreadId
+                         125 DisableThreadLibraryCalls
+                         378 InitializeSListHead
+                         38E IsDebuggerPresent
+                         59D Sleep
+
+    VCRUNTIME140.dll
+             180009088 Import Address Table
+             18000BC98 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          3C memcpy
+                          25 __std_type_info_destroy_list
+                           8 __C_specific_handler
+                          3E memset
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             1800090F8 Import Address Table
+             18000BD08 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          19 malloc
+                          18 free
+
+    api-ms-win-crt-string-l1-1-0.dll
+             180009158 Import Address Table
+             18000BD68 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          8E strncmp
+                          8F strncpy
+                          86 strcmp
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             180009110 Import Address Table
+             18000BD20 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          16 _cexit
+                          36 _initterm
+                          37 _initterm_e
+                          3F _seh_filter_dll
+                          18 _configure_narrow_argv
+                          33 _initialize_narrow_environment
+                          34 _initialize_onexit_table
+                          22 _execute_onexit_table
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        5000 .rdata
+        1000 .reloc
+        8000 .text
