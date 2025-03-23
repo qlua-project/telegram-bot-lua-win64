@@ -1,10 +1,8 @@
 @echo off
 setlocal
-set "BATCH_DIR=%~dp0"
-set "CWD=%BATCH_DIR:~0,-1%"
 
 set "LUAROCKS_SYSCONFDIR=C:\Program Files\luarocks"
-rem set "LUAROCKS_SYSCONFDIR=%CWD%\.luarocks"
+rem set "LUAROCKS_SYSCONFDIR=%~dp0.luarocks"
 rem set "OPENSSL_DIR=%~dp0externals\openssl"
 
 call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" x64 > NUL
