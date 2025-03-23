@@ -2,3 +2,7 @@
 	path = externals/lua-5.4.1
 	url = https://github.com/qlua-project/cmake-lua-win64
 	branch = v5.4.1
+[submodule "lua-5.3.5"]
+	path = externals/lua-5.3.5
+	url = https://github.com/qlua-project/cmake-lua-win64
+	branch = v5.3.5
