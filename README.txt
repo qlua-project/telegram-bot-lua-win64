@@ -22,7 +22,57 @@ luarocks.exe
   > luarocks -h
   > luarocks --lua-dir externals/lua --versbose config
 
-  > luarocks --lua-dir externals/lua init
+  > luarocks --lua-dir externals/lua init -h
+
+          Usage: luarocks init [-h] [--wrapper-dir <wrapper_dir>] [--reset]
+                 [--no-wrapper-scripts] [--no-gitignore] [--output <file>]
+                 [--license <string>] [--summary <txt>] [--detailed <txt>]
+                 [--homepage <txt>] [--lua-versions <ver>]
+                 [--rockspec-format <ver>] [--tag <tag>] [--lib <libs>] [<name>]
+                 [<version>]
+          Arguments:
+             name                  The project name.
+             version               An optional project version.
+          Options for specifying rockspec data:
+             --output <file>       Write the rockspec with the given filename.
+                                   If not given, a file is written in the current
+                                   directory with a filename based on given name and
+                                   version.
+             --license <string>    A license string, such as "MIT/X11" or "GNU GPL v3".
+             --summary <txt>       A short one-line description summary.
+             --detailed <txt>      A longer description string.
+             --homepage <txt>      Project homepage.
+             --lua-versions <ver>  Supported Lua versions. Accepted values are: "5.1",
+                                   "5.2", "5.3", "5.4", "5.1,5.2", "5.2,5.3", "5.3,5.4",
+                                   "5.1,5.2,5.3", "5.2,5.3,5.4", "5.1,5.2,5.3,5.4".
+             --rockspec-format <ver>
+                                   Rockspec format version, such as "1.0" or "1.1".
+             --tag <tag>           Tag to use. Will attempt to extract version number from
+                                   it.
+             --lib <libs>          A comma-separated list of libraries that C files need
+                                   to link to.
+          Other options:
+             --wrapper-dir <wrapper_dir>
+                                   Location where the 'lua' and 'luarocks' wrapper scripts
+                                   should be generated; if not given, the current
+                                   directory is used as a default.
+             --reset               Delete any .luarocks/config-5.x.lua and ./lua and
+                                   generate new ones.
+             --no-wrapper-scripts  Do not generate wrapper ./lua and ./luarocks launcher
+                                   scripts.
+             --no-gitignore        Do not generate a .gitignore file.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  > luarocks --lua-dir externals/lua init --lua-versions "5.3,5.4" --no-gitignore telegram-bot-lua-win64
+
+        Wrote template telegram-bot-lua-dev-1.rockspec -- you should now edit and finish it.
+
+          Preparing ./.luarocks/ ...
+          Wrote .luarocks/config-5.4.lua
+          Preparing ./lua_modules/ ...
+          Preparing luarocks.bat ...
+          Preparing lua.bat for version 5.4...
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
