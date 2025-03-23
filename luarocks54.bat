@@ -1,0 +1,1 @@
+@"%~dp0luarocks.bat" --lua-version "5.4" %*
