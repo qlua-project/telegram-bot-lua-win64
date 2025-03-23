@@ -1,7 +1,9 @@
 package = "telegram-bot-lua-win64"
 version = "dev-1"
 source = {
-   url = "git+ssh://git@github.com/qlua-project/telegram-bot-lua-win64.git"
+   url = "git+ssh://git@github.com/qlua-project/telegram-bot-lua-win64.git",
+   dir = "telegram-bot-lua",
+   branch = "main",
 }
 description = {
    homepage = "*** please enter a project homepage ***",
