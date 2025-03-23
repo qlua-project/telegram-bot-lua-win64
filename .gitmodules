@@ -9,3 +9,7 @@
 [submodule "telegram-bot-lua"]
 	path = externals/telegram-bot-lua
 	url = https://github.com/wrxck/telegram-bot-lua
+[submodule "openssl"]
+	path = externals/openssl
+	url = https://github.com/qlua-project/external-openssl-win64
+	branch = 3.4.1
