@@ -1,3 +1,4 @@
 @pushd %~dp0bot-connect
-@lua54 lua\lua-features.lua %*
+rem @call "%~dp0..\lua54" lua\lua-features.lua %*
+@call "lua54" run.lua %*
 @popd
