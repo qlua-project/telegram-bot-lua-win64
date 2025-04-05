@@ -37,3 +37,6 @@ print(debug.getinfo(1, "S").short_src)
 -- "l": reads the next line skipping the end of line, returning fail on end of file. This is the default format.
 print(io.popen("cd"):read('l'))
 print(io.popen("cd"):read() .. '/' .. debug.getinfo(1, "S").short_src)
+
+print()
+dofile("lua/bot-connect.lua")
