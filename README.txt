@@ -1,5 +1,24 @@
 telegram-bot-lua
 
+https://github.com/qlua-project/telegram-bot-lua.git
+
+> luarocks install https://raw.githubusercontent.com/qlua-project/telegram-bot-lua/refs/heads/main/telegram-bot-lua-2.0-0.rockspec
+
+  win32 support added
+
+Patched path/cpath
+
+  > lua54.bat src\bot-connect.lua
+  > lua53.bat src\bot-connect.lua
+
+Native structure
+
+  > dist\bot-connect\lua54.exe dist\bot-connect\run.lua
+  > dist\bot-connect\lua53.exe dist\bot-connect\run.lua
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 https://luarocks.org/modules/wrxck/telegram-bot-lua
 
 > luarocks install telegram-bot-lua
