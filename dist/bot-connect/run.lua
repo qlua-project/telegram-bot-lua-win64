@@ -1,42 +1,41 @@
-print()
-print(package.path)
-print()
-print(package.cpath)
-
 local inspect = require("inspect")
 
-print()
-print(inspect(_G))
+local getScriptPath1 = function()
+    print(inspect(arg))
+    local cwd = arg[0]:match("(.*[/\\])") or ".\\"
+    print(cwd)
+    return cwd
+end
 
-print()
-print('lua-features', inspect(package.loaded['lua-features']))
--- dofile("lua/lua-features.lua")
-require("lua-features")
+local getScriptPath2 = function()
+    print(inspect(debug.getinfo(1, "S")))
+    local cwd
+    cwd = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])") or ".\\"
+    print(cwd)
+    -- cwd = debug.getinfo(1, "S").short_src:match("(.*[/\\])") or ".\\"
+    -- print(cwd)
+    return cwd
+end
 
-print()
-print('lua-features', inspect(package.loaded['lua-features']))
+-- > dist\bot-connect\lua54.exe dist\bot-connect\run.lua
+local script_dir
+script_dir = getScriptPath1()
+script_dir = getScriptPath2()
+dofile(script_dir .. "test.lua")
+-- dofile 'test'
+--   [0] = "dist\\bot-connect\\run.lua"
+--   short_src = "dist\\bot-connect\\test.lua",
+--   source = "@dist\\bot-connect\\test.lua",
+-- require 'test'
+--   [0] = "dist\\bot-connect\\run.lua"
+--   short_src = "...yground-telegram-bot-lua-win32\\dist\\bot-connect\\test.lua"
+--   source = "@C:\\FX\\QLUA\\playground-telegram-bot-lua-win32\\dist\\bot-connect\\test.lua"
+print(inspect(package.loaded, {depth=1}))
+require('test')  -- like dofile
+print(inspect(package.loaded, {depth=1}))
+require('test')  -- skip
 
-print()
--- {
---   lastlinedefined = 0,
---   linedefined = 0,
---   short_src = "run.lua",
---   source = "@run.lua",
---   what = "main"
--- }
-print(debug.getinfo(1, "S"))
-print(inspect(debug.getinfo(1, "S")))
--- print(debug.getinfo(1, "S").source:sub(2))
-print(debug.getinfo(1, "S").short_src)
-
--- https://www.lua.org/pil/21.1.html (Simple I/O Model)
--- "*all"  reads the whole file
--- "*line"  reads the next line
--- print(io.popen("cd"):read'*all')
--- https://www.lua.org/manual/5.4/manual.html#pdf-file:read
--- "l": reads the next line skipping the end of line, returning fail on end of file. This is the default format.
-print(io.popen("cd"):read('l'))
-print(io.popen("cd"):read() .. '/' .. debug.getinfo(1, "S").short_src)
-
-print()
-dofile("lua/bot-connect.lua")
+-- dofile(script_dir .. "lua/bot-connect.lua")
+local bot_connect = require('bot-connect')
+print(inspect(bot_connect, {newline=' ',indent=''}))
+-- bot_connect.connect()
